@@ -2,7 +2,7 @@
 
 This project is sample warehouse api project. 
 This project developed using Symfony **v4.2** , php **v7.2** , mariadb **10.1**.
-With using this api you can the operations below
+With using this api you can do the operations below
 
 - Login: login with username and password and get token 
 - Give Order
