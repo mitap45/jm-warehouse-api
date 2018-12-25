@@ -22,10 +22,10 @@ You can change .env file to specify your database credentials.
 Also you need to have composer installed on your system to install 3. party libraries.
 Finally you need to run commands below to start the project
 
-```composer install // to install dependencies``` 
-```php bin/console doctrine:database:create // to db based on connection string in the .env file``` 
-```php bin/console doctrine:migrations:migrate // to update the db with latest migration```
-```php bin/console doctrine:fixtures:load // to load pre-defined data to database ```
-```you can check src/Fixtures/AppFixtures.php for details```
+```composer install // to install dependencies```  
+```php bin/console doctrine:database:create // to create db based on connection string in the .env file```  
+```php bin/console doctrine:migrations:migrate // to update the db with latest migration```  
+```php bin/console doctrine:fixtures:load // to load pre-defined data to database ```  
+```you can check src/Fixtures/AppFixtures.php for details```  
 
 Now you are ready to make requests to api.
