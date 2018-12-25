@@ -1,0 +1,203 @@
+{
+	"id": "47048efa-1c33-4805-bfcc-164fa1093e7d",
+	"name": "WarehouseApi",
+	"description": "",
+	"auth": null,
+	"events": null,
+	"variables": [],
+	"order": [],
+	"folders_order": [
+		"d9a1f550-8005-4fe0-a8fa-b5930b3f8275",
+		"d8463b0a-1bde-4b85-81ef-1de989175b8e"
+	],
+	"folders": [
+		{
+			"id": "d9a1f550-8005-4fe0-a8fa-b5930b3f8275",
+			"name": "Auth",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "47048efa-1c33-4805-bfcc-164fa1093e7d",
+			"folder": null,
+			"order": [
+				"a5cefaf5-7bd9-4f1c-80bc-7270beeabcc3"
+			],
+			"folders_order": []
+		},
+		{
+			"id": "d8463b0a-1bde-4b85-81ef-1de989175b8e",
+			"name": "Order",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "47048efa-1c33-4805-bfcc-164fa1093e7d",
+			"folder": null,
+			"order": [
+				"cbff8196-6ba4-43c9-aa97-77fc43cd5669",
+				"61ec1325-191d-4a4e-8a99-7605b49aaade",
+				"371d5031-0c65-4c66-8472-e8e946ae777e",
+				"81aa7485-b1b6-481d-b80a-805153dca95b",
+				"0d493a1c-f662-4fac-9a2e-a3dd72ff62eb"
+			],
+			"folders_order": []
+		}
+	],
+	"requests": [
+		{
+			"id": "0d493a1c-f662-4fac-9a2e-a3dd72ff62eb",
+			"name": "Order Update",
+			"url": "http://127.0.0.1:8000/api/order/update",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "d8463b0a-1bde-4b85-81ef-1de989175b8e",
+			"rawModeData": "{\n\t\"orderNo\":\"XTR000021415\",\n\t\"orderDate\":{\"date\":\"2018-10-01  10:00:00.000000\",\"timezone_type\":3,\"timezone\":\"Europe\\/Istanbul\"},\n\t\"items\":[1001,1240,1112],\n\t\"maxShippingDate\":{\"date\":\"2018-10-05  10:00:00.000000\",\"timezone_type\":3,\"timezone\":\"Europe\\/Istanbul\"},\n\t\"customerName\":\"Jhon Does\",\n\t\"shippingAddress\":\"Testtt address\",\n\t\"shippingCity\":34,\n\t\"shippingRegion\":84,\n\t\"postalCode\":34584,\n\t\"token\":\"55524d62781a57ca47fd3687c2efdfeaf317ff\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "371d5031-0c65-4c66-8472-e8e946ae777e",
+			"name": "Delivery Status",
+			"url": "http://127.0.0.1:8000/api/order/delivery-status",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "d8463b0a-1bde-4b85-81ef-1de989175b8e",
+			"rawModeData": "{\n\t\"orderNo\":\"XTR000021415\",\n\t\"token\":\"83e22d25b9f279dac2e91f5b501246882c9817ba\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "61ec1325-191d-4a4e-8a99-7605b49aaade",
+			"name": "Shipping Status",
+			"url": "http://127.0.0.1:8000/api/order/shipping-status",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "d8463b0a-1bde-4b85-81ef-1de989175b8e",
+			"rawModeData": "{\n\t\"orderNo\":\"XTR000021415\",\n\t\"token\":\"83e22d25b9f279dac2e91f5b501246882c9817ba\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "81aa7485-b1b6-481d-b80a-805153dca95b",
+			"name": "Order Cancel",
+			"url": "http://127.0.0.1:8000/api/order/cancel",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "d8463b0a-1bde-4b85-81ef-1de989175b8e",
+			"rawModeData": "{\n\t\"orderNo\":\"XTR000021415\",\n\t\"cancelDate\":{\"date\":\"2018-10-01  10:00:00.000000\",\"timezone_type\":3,\"timezone\":\"Europe\\/Istanbul\"},\n\t\"token\":\"83e22d25b9f279dac2e91f5b501246882c9817ba\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "a5cefaf5-7bd9-4f1c-80bc-7270beeabcc3",
+			"name": "Auth Login",
+			"url": "http://127.0.0.1:8000/api/auth/login",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"description": "",
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"type": "text",
+					"value": "application/json"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "d9a1f550-8005-4fe0-a8fa-b5930b3f8275",
+			"rawModeData": "{\n\t\"username\" : \"company1\",\n\t\"password\" : \"company1\",\n\t\"token\" : \"\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "cbff8196-6ba4-43c9-aa97-77fc43cd5669",
+			"name": "Order Create",
+			"url": "http://127.0.0.1:8000/api/order/create",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "d8463b0a-1bde-4b85-81ef-1de989175b8e",
+			"rawModeData": "{\n\t\"orderNo\":\"XTR000021415\",\n\t\"orderDate\":{\"date\":\"2018-10-01  10:00:00.000000\",\"timezone_type\":3,\"timezone\":\"Europe\\/Istanbul\"},\n\t\"items\":[1001,1240,1112],\n\t\"maxShippingDate\":{\"date\":\"2018-10-05  10:00:00.000000\",\"timezone_type\":3,\"timezone\":\"Europe\\/Istanbul\"},\n\t\"customerName\":\"Jhon Doe\",\n\t\"shippingAddress\":\"Test address\",\n\t\"shippingCity\":34,\n\t\"shippingRegion\":84,\n\t\"postalCode\":34584,\n\t\"token\":\"c00b3edb0b5d170ce2b619abf5be5f3b2f711a1e\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		}
+	]
+}

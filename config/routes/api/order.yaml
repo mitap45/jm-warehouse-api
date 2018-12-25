@@ -1,0 +1,19 @@
+order_create:
+  path:     /create
+  controller: App\Controller\Api\OrderController::create
+
+order_update:
+  path:     /update
+  controller: App\Controller\Api\OrderController::update
+
+order_shipping_status:
+  path:     /shipping-status
+  controller: App\Controller\Api\OrderStatusController::shippingStatus
+
+order_delivery_status:
+  path:     /delivery-status
+  controller: App\Controller\Api\OrderStatusController::deliveryStatus
+
+order_cancellation:
+  path:     /cancel
+  controller: App\Controller\Api\OrderCancellationController::cancel

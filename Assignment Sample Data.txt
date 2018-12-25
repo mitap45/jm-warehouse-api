@@ -1,0 +1,47 @@
+Example Products :
+
+{"product_1":{"code":1001,"amount":10},"product_2":{"code":1112,"amount":5},"product_3":{"code":1135,"amount":4},"product_4":{"code":1240,"amount":84},"product_5":{"code":1673,"amount":43},"product_6":{"code":1391,"amount":32}}
+
+Order Request:
+
+[order] => {"orderNo":"XTR000021415","orderDate":{"date":"2018-10-01  10:00:00.000000","timezone_type":3,"timezone":"Europe\/Istanbul"},"items":[1001,1240,1112],"maxShippingDate":{"date":"2018-10-05  10:00:00.000000","timezone_type":3,"timezone":"Europe\/Istanbul"},"customerName":"Jhon Doe","shippingAddress":"Test address","shippingCity":34,"shippingRegion":84,"postalCode":34584}
+
+Order Response : 
+
+{"status":"OK","responceCode":200}
+
+
+Update Request:
+
+[update] => {"orderNo":"XTR000021415","orderDate":{"date":"2018-10-01  10:00:00.000000","timezone_type":3,"timezone":"Europe\/Istanbul"},"items":[1001,1240,1135],"maxShippingDate":{"date":"2018-10-05  10:00:00.000000","timezone_type":3,"timezone":"Europe\/Istanbul"},"customerName":"Jhon Doe","shippingAddress":"Test address","shippingCity":34,"shippingRegion":84,"postalCode":34584}
+
+Update Response : 
+
+{"status":"OK","responceCode":200}
+
+
+Shipping Status Check Request:
+
+[shipping] => {"orderNo":"XTR000021415"}
+
+Shipping Status Check Response : 
+
+{"status":"OK","responceCode":200,"shippingDate":{"date":"2018-10-05  10:00:00.000000","timezone_type":3,"timezone":"Europe\/Istanbul"},"shippingCode":"AF124F1451"}
+
+
+Delivery Request:
+
+[delivery] => {"orderNo":"XTR000021415"}
+
+Delivery Response : 
+
+{"status":"OK","responceCode":200,"deliveryDate":{"date":"2018-10-05  10:00:00.000000","timezone_type":3,"timezone":"Europe\/Istanbul"},"shippingCode":"AF124F1451"}
+
+
+Cancel Request :
+
+[cancel] => {"orderNo":"XTR000021415","cancelDate":{"date":"2018-10-01  10:00:00.000000","timezone_type":3,"timezone":"Europe\/Istanbul"}}
+
+Cancel Response :
+
+{"status":"OK","responceCode":200} || {"status":"OK","responceCode":200,"returnShippingCode":AF124F1451}

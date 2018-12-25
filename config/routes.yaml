@@ -1,0 +1,10 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+api_auth:
+  resource: "routes/api/authentication.yaml"
+  prefix:   /api/auth
+
+api_order:
+  resource: "routes/api/order.yaml"
+  prefix:   /api/order
