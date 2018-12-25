@@ -80,7 +80,7 @@ class OrderController extends AbstractController
         }
 
         //Checking if orderNo is unique
-        $isOrderNoUnique = $companyCodeHelper->isUnique($orderNo);
+        $isOrderNoUnique = $companyCodeHelper->isOrderNoUnique($orderNo);
         if(!$isOrderNoUnique)
         {
             return new Response(

@@ -23,30 +23,21 @@ class UserRepository extends ServiceEntityRepository
     public function findByOrderNoBeginnings($orderNo)
     {
         $firstThreeChar = substr($orderNo, 0, 3);
-
-        if(CompanyCodeHelper::ECOMMERCE_COMPANY1_BEGINNING === $firstThreeChar)
-            return $this->findOneBy(array('username' => 'company1'));
-        elseif (CompanyCodeHelper::ECOMMERCE_COMPANY2_BEGINNING === $firstThreeChar)
-            return $this->findOneBy(array('username' => 'company2'));
-        elseif (CompanyCodeHelper::ECOMMERCE_COMPANY3_BEGINNING === $firstThreeChar)
-            return $this->findOneBy(array('username' => 'company3'));
-        else
+        $company = $this->findOneBy(array('code' => $firstThreeChar));
+        if(!$company)
             return 'Ecommerce company not found for given code';
-
+        else
+            return $company;
     }
 
     public function findByShippingCodeBeginnings($shippingCode)
     {
         $firstChar = substr($shippingCode, 0, 1);
-
-        if(CompanyCodeHelper::CARGO_COMPANYA_BEGINNING === $firstChar)
-            return $this->findOneBy(array('username' => 'cargoA'));
-        elseif (CompanyCodeHelper::CARGO_COMPANYB_BEGINNING === $firstChar)
-            return $this->findOneBy(array('username' => 'cargoB'));
-        elseif (CompanyCodeHelper::CARGO_COMPANYC_BEGINNING === $firstChar)
-            return $this->findOneBy(array('username' => 'cargoC'));
-        else
+        $cargoCompany = $this->findOneBy(array('code' => $firstChar));
+        if(!$cargoCompany)
             return 'Ecommerce company not found for given code';
+        else
+            return $cargoCompany;
 
     }
 

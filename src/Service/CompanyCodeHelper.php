@@ -54,7 +54,7 @@ class CompanyCodeHelper
          * @param string $orderNo
          * @return bool
          */
-        public function isUnique(string $orderNo) : bool
+        public function isOrderNoUnique(string $orderNo) : bool
         {
             $qb = $this->em->getRepository('App\Entity\Order')->createQueryBuilder('o');
             $qb

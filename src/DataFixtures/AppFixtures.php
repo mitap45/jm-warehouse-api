@@ -4,6 +4,7 @@ namespace App\DataFixtures;
 
 use App\Entity\Product;
 use App\Entity\User;
+use App\Service\CompanyCodeHelper;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
 
@@ -22,36 +23,42 @@ class AppFixtures extends Fixture
         $user->setUsername('company1');
         $hashedPassword = password_hash('company1', PASSWORD_DEFAULT);
         $user->setPassword($hashedPassword);
+        $user->setCode(CompanyCodeHelper::ECOMMERCE_COMPANY1_BEGINNING);
         $manager->persist($user);
 
         $user = new User();
         $user->setUsername('company2');
         $hashedPassword = password_hash('company2', PASSWORD_DEFAULT);
         $user->setPassword($hashedPassword);
+        $user->setCode(CompanyCodeHelper::ECOMMERCE_COMPANY2_BEGINNING);
         $manager->persist($user);
 
         $user = new User();
         $user->setUsername('company3');
         $hashedPassword = password_hash('company3', PASSWORD_DEFAULT);
         $user->setPassword($hashedPassword);
+        $user->setCode(CompanyCodeHelper::ECOMMERCE_COMPANY3_BEGINNING);
         $manager->persist($user);
 
         $user = new User();
         $user->setUsername('cargoA');
         $hashedPassword = password_hash('cargoA', PASSWORD_DEFAULT);
         $user->setPassword($hashedPassword);
+        $user->setCode(CompanyCodeHelper::CARGO_COMPANYA_BEGINNING);
         $manager->persist($user);
 
         $user = new User();
         $user->setUsername('cargoB');
         $hashedPassword = password_hash('cargoB', PASSWORD_DEFAULT);
         $user->setPassword($hashedPassword);
+        $user->setCode(CompanyCodeHelper::CARGO_COMPANYB_BEGINNING);
         $manager->persist($user);
 
         $user = new User();
         $user->setUsername('cargoC');
         $hashedPassword = password_hash('cargoC', PASSWORD_DEFAULT);
         $user->setPassword($hashedPassword);
+        $user->setCode(CompanyCodeHelper::CARGO_COMPANYC_BEGINNING);
         $manager->persist($user);
 
     }

@@ -29,6 +29,11 @@ class User
     private $password;
 
     /**
+     * @ORM\Column(type="string", length=10)
+     */
+    private $code;
+
+    /**
      * @ORM\OneToMany(targetEntity="App\Entity\Token", mappedBy="user")
      */
     private $tokens;
@@ -169,6 +174,18 @@ class User
                 $takenOrder->setCargoCompany(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getCode(): ?string
+    {
+        return $this->code;
+    }
+
+    public function setCode(string $code): self
+    {
+        $this->code = $code;
 
         return $this;
     }
