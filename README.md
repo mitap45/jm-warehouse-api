@@ -1,4 +1,4 @@
-# Welcome to StackEdit!
+# Warehouse API
 
 This project is sample warehouse api project. 
 This project developed using Symfony **v4.2** , php **v7.2** , mariadb **10.1**.
@@ -12,7 +12,7 @@ With using this api you can the operations below
 - Cancel Order
 
 > Default username and passwords can be found in SampleUsers.txt file
-> All sample requests and responses can be found in WarehouseApi.postman_collection.json file
+> All sample requests and responses can be found in WarehouseApi.postman_collection.json and SampleRequests.txt file
 
 # Installation
 
@@ -26,6 +26,13 @@ Finally you need to run commands below to start the project
 ```php bin/console doctrine:database:create // to create db based on connection string in the .env file```  
 ```php bin/console doctrine:migrations:migrate // to update the db with latest migration```  
 ```php bin/console doctrine:fixtures:load // to load pre-defined data to database ```  
-```you can check src/Fixtures/AppFixtures.php for details```  
+```you can check src/DataFixtures/AppFixtures.php for details```  
 
 Now you are ready to make requests to api.
+
+# Additional Info
+- Doctrine Fixtures Bundle **v3.1** used for loading pre defined data to database  
+- Ecommerce and Cargo companies stored as User in the system  
+- Sample products added to database when loading fixtures
+- Order statuses are stored in order_status table and 
+latest status is the current status for that order

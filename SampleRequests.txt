@@ -1,0 +1,67 @@
+LOGIN
+url = "domain-name/api/auth/login"
+method = post
+data = {
+           "message": "Login was successful",
+           "token": "03eafebc2bb4e9368292c438619b12b6c6057a5c"
+       }
+
+ORDER CREATE
+url = "domain-name/api/order/create"
+method = post
+data = {
+       	"orderNo":"XTR000021415",
+       	"orderDate":{"date":"2018-10-01  10:00:00.000000","timezone_type":3,"timezone":"Europe\/Istanbul"},
+       	"items":[1001,1240,1112],
+       	"maxShippingDate":{"date":"2018-10-05  10:00:00.000000","timezone_type":3,"timezone":"Europe\/Istanbul"},
+       	"customerName":"Jhon Doe",
+       	"shippingAddress":"Test address",
+       	"shippingCity":34,
+       	"shippingRegion":84,
+       	"postalCode":34584,
+       	"token":"03eafebc2bb4e9368292c438619b12b6c6057a5c"
+       }
+
+ORDER UPDATE
+url = "domain-name/api/order/update"
+method = post
+data = {
+       	"orderNo":"XTR000021415",
+       	"orderDate":{"date":"2018-10-01  10:00:00.000000","timezone_type":3,"timezone":"Europe\/Istanbul"},
+       	"items":[1001,1240,1112],
+       	"maxShippingDate":{"date":"2018-10-05  10:00:00.000000","timezone_type":3,"timezone":"Europe\/Istanbul"},
+       	"customerName":"Jhon Does",
+       	"shippingAddress":"Test addresssss",
+       	"shippingCity":34,
+       	"shippingRegion":84,
+       	"postalCode":34584,
+       	"token":"03eafebc2bb4e9368292c438619b12b6c6057a5c"
+       }
+
+ORDER SHIPPING STATUS
+url = "domain-name/api/order/shipping-status"
+method = post
+data = {
+       	"orderNo":"XTR000021415",
+       	"token":"03eafebc2bb4e9368292c438619b12b6c6057a5c"
+       }
+
+ORDER DELIVERY STATUS
+url = "domain-name/api/order/delivery-status"
+method = post
+data = {
+       	"orderNo":"XTR000021415",
+       	"token":"03eafebc2bb4e9368292c438619b12b6c6057a5c"
+       }
+
+
+ORDER CANCEL
+url = "domain-name/api/order/delivery-status"
+method = post
+data = {
+       	"orderNo":"XTR000021415",
+       	"cancelDate":{"date":"2018-10-01  10:00:00.000000","timezone_type":3,"timezone":"Europe\/Istanbul"},
+       	"token":"03eafebc2bb4e9368292c438619b12b6c6057a5c"
+       }
+
+
