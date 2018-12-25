@@ -256,7 +256,7 @@ class OrderController extends AbstractController
 
 
     /**
-     * Check itemCodes to our product codes and if one product does not exist then return true
+     * Check itemCodes with our product codes and if one product does not exist then return true
      * If codes are matched then add OrderProducts for given order.
      * Not seperating missing product check as a function because it would increase the number of db query
      * @param Order $order
@@ -377,6 +377,12 @@ class OrderController extends AbstractController
         return $order;
     }
 
+    /**
+     * Checking if order address changed or not for update operation.
+     * @param Order $order
+     * @param array $requestedData
+     * @return bool
+     */
     private function isShippingAddressChanged(Order $order, array $requestedData) : bool
     {
         if(

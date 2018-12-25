@@ -67,6 +67,7 @@ class OrderStatusController extends AbstractController
 
         }
 
+        //If we cant find order by id return 404
         $order = $this->em->getRepository('App\Entity\Order')->findOneBy(array('orderNo' => $orderNo));
         if(!$order)
         {
@@ -77,6 +78,8 @@ class OrderStatusController extends AbstractController
             );
         }
 
+        //If order statu is delivered then we return delivery info
+        //If order statu is not delivered then we return current status of the order.
         $orderStatus = $this->em->getRepository('App\Entity\OrderStatus')->getOrderStatusByOrderId($order->getId());
         if ($orderStatus->getStatus() === OrderStatusConstants::ORDER_SHIPPING)
         {
@@ -140,6 +143,7 @@ class OrderStatusController extends AbstractController
 
         }
 
+        //If we cant find order by id return 404
         $order = $this->em->getRepository('App\Entity\Order')->findOneBy(array('orderNo' => $orderNo));
         if(!$order)
         {
@@ -150,6 +154,8 @@ class OrderStatusController extends AbstractController
             );
         }
 
+        //If order statu is delivered then we return delivery info
+        //If order statu is not delivered then we return current status of the order.
         $orderStatus = $this->em->getRepository('App\Entity\OrderStatus')->getOrderStatusByOrderId($order->getId());
         if ($orderStatus->getStatus() === OrderStatusConstants::ORDER_DELIVERED)
         {

@@ -29,9 +29,7 @@ class OrderCancellationController extends AbstractController
     public function cancel(Request $request)
     {
 
-        /**
-         * Checking if the request has any content if not then return bad request
-         */
+        //Checking if the request has any content if not then return bad request
         if(!$request->getContent())
         {
             return new Response(
@@ -42,9 +40,7 @@ class OrderCancellationController extends AbstractController
 
         }
 
-        /**
-         * recieving posted json data that includes username password and token
-         */
+        //recieving posted json data that includes username password and token
         $data = json_decode($request->getContent(), true);
 
 
